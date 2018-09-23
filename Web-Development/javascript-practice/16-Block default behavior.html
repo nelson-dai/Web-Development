@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Block default behavior</title>
+<script type="text/javascript">
+	//IE:window.event.returnValue = false;
+	//W3C:传递过来的对象.preventDefault();
+	function fun(e){
+		//W3C
+		if(e && e.preventDefault){
+			alert("W3C");
+			e.preventDefault();
+		}else{
+			alert("IE");
+			window.event.returnValue = false;
+		}
+	}
+</script>
+</head>
+<body>
+	<a href="15-onload.html" onclick="fun(event)">click me</a>
+</body>
+</html>

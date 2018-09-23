@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>getElementsByTagName</title>
+</head>
+<body>
+	<form name="baseInfo" action="#" method="post">
+		input：<input type="text" value="value1" name="name">
+		<br>
+		input：<input type="text"  value="value2" name="name">
+		<br>
+		input：<input type="text"  value="value3"  name="name">
+		<br>
+		
+	   <select name="hobby" id="hobby">
+	   	  <option value="basketball">basketball</option>
+		  <option value="football">football</option>
+		  <option value="swimming">swimming</option>
+	   </select>
+	   <br>
+	   <select name="star" id="star" >
+	   	  <option value="jk">Jake</option>
+		  <option value="js">Jason</option>
+		  <option value="ns">Nelson</option>
+		  <option value="dm">Dom</option>
+	   </select>
+	   
+	   <br>
+	   <input type="button" id="btn" name="submit" value="submit" />
+	</form>
+</body>
+<script type="text/javascript">
+	/*
+	//get all input elements
+	var inputArr = document.getElementsByTagName("input");
+	alert(inputArr.length);
+	
+	//output value's type in type="text" in input
+	for(var i=0; i<inputArr.length; i++){
+		if("text" == inputArr[i].type){
+			alert(inputArr[i].value);
+		}
+		
+	}
+	
+	//output value's value in option in input 
+	var optionArr = document.getElementsByTagName("option");
+	for(var i=0; i<optionArr.length; i++){
+		alert(optionArr[i].value);
+	}
+	
+	//output all drop down value in optin in input
+	var star = document.getElementById("star");
+	var optionArr = star.getElementsByTagName("option");
+	for(var i=0; i<optionArr.length; i++){
+		alert(optionArr[i].value);
+	}
+	*/
+	
+	
+	//output slected value in drop down list
+	
+	var optionArr = document.getElementsByTagName("option");
+	for(var i=0; i<optionArr.length; i++){
+		if(optionArr[i].selected){
+			alert(optionArr[i].value);
+		}
+		
+	}
+</script>
+</html>

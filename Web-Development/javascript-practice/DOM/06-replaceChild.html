@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>replaceChild</title>
+</head>
+<body>
+	<form name="baseInfo" action="#" method="post">
+		input：<input type="text" value="value1" name="name" id="id1">
+		<br>
+		input：<input type="text"  value="value2" name="name">
+		<br>
+		input：<input type="text"  value="value3"  name="name">
+		<br>
+		
+	   <select name="hobby" id="hobby">
+	   	  <option value="basketball">basketball</option>
+		  <option value="football">football</option>
+		  <option id="volleyball" value="volleyball">volleyball</option>
+	   </select>
+	   <br>
+	   <select name="star" id="star" >
+		<option value="jk">Jake</option>
+		<option value="js">Jason</option>
+		<option value="ns">Nelson</option>
+		<option value="dm" id="dm">Dom</option>
+	   </select>
+	   
+	   <br>
+	   <input type="button" id="btn" name="submit" value="submit" />
+	</form>
+</body>
+<script type="text/javascript">
+
+	var volleyball = document.getElementById("volleyball");
+	var dm = document.getElementById("dm");
+	
+	var hobby = document.getElementById("hobby");
+	
+	hobby.replaceChild(dm,volleyball);
+	
+</script>
+</html>

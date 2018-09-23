@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>getElementById</title>
+</head>
+<body>
+	<form name="baseInfo" action="#" method="post">
+		name：<input type="text"   id="name">
+		<br>
+		password：<input type="password"  id="pwd" >
+		<br>
+		<input type="button" id="btn" name="submit" value="submit" />
+	</form>
+</body>
+<script type="text/javascript">
+	var username = document.getElementById("name");
+	var pwd = document.getElementById("pwd");
+	
+	var btn = document.getElementById("btn");
+	
+	btn.onclick = function(){
+		alert(username.value);
+		alert(pwd.value);
+	};
+</script>
+</html>

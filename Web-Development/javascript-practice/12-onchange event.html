@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onchange event</title>
+
+</head>
+<body>
+	<select id="city">
+		<option value="vic">Victoria</option>
+		<option value="van">Vancouver</option>
+		<option value="tor">Toronto</option>
+	</select>
+	
+	<select id="university">
+		<option>UVic</option>
+		<option>RRU</option>
+	</select>
+</body>
+<script type="text/javascript">
+	var select = document.getElementById("city");
+	
+	select.onchange = function(){
+		var area = document.getElementById("university");
+		
+		var optionVal = select.value;
+		if("vic" == optionVal){
+			area.innerHTML = "<option>UVic</option><option>RRU</option>";
+		}else if("van" == optionVal){
+			area.innerHTML = "<option>UBC</option><option>KPU</option>";
+		}else if("tor" == optionVal){
+			area.innerHTML = "<option>UT</option>";
+		}else{
+			alert("error");
+		}
+	};
+</script>
+</html>

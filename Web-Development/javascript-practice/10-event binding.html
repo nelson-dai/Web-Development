@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event binding</title>
+
+</head>
+<body>
+	
+	<!-- 1.event binding directly -->
+	<input type="button" value="click me 1" onclick="alert('event binding 1')">
+	
+	<!-- 2.same file -->
+	<input type="button" value="click me 2" onclick="fun()">
+	
+	<!-- 3.different file -->
+	<input id="btn" type="button" value="click me 3">
+</body>
+<script type="text/javascript">
+	function fun(){
+		alert("event binding 2");
+	}
+	
+	var btn = document.getElementById("btn");
+	//alert(btn);
+	btn.onclick = function(){
+		alert("event binding 3");
+	};
+</script>
+</html>

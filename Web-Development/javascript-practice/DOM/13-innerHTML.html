@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>innerHTML</title>
+</head>
+<body>
+	<table>
+	<tr id="tr1">
+		<td id="td1">Java</td>
+		<td id="td2">Python</td>
+	</tr>
+	</table>
+	<div id="d1">let's play</div>
+</body>
+<script type="text/javascript">
+	var tr1 = document.getElementById("tr1");
+	tr1.innerHTML = "<td>HTML</td>"
+	
+	var d1 = document.getElementById("d1");
+	
+	setTimeout(function() {
+		d1.innerHTML = "Study hard, play hard!";
+	}, 3000);
+</script>
+</html>

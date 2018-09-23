@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>NodeNameValueType</title>
+</head>
+<body>
+	<form name="baseInfo" action="#" method="post">
+		input：<input type="text" value="value1" id="Nelson1" name="nelson">
+		<br>
+		input：<input type="text" value="value2"  name="nelson">
+		<br>
+		input：<input type="text" value="value3" name="nelson">
+		<br>
+		<input type="button" id="btn" name="submit" value="submit" />
+	</form>
+	<a id="java" href="http://www.google.com">google</a>
+</body>
+<script type="text/javascript">
+	/*
+	//Element node
+	var node = document.getElementById("nelson1");
+	alert(node.nodeName);
+	alert(node.nodeType);
+	alert(node.nodeValue);
+	
+	//Text node
+	var node = document.getElementById("java");
+	var textNode = node.firstChild;
+	alert(textNode.nodeName);
+	alert(textNode.nodeType);
+	alert(textNode.nodeValue);
+	*/
+	
+	//Attribute node
+	var node = document.getElementById("java");
+	var attrNode = node.getAttributeNode("href");
+	alert(attrNode.nodeName);
+	alert(attrNode.nodeType);
+	alert(attrNode.nodeValue);
+	
+</script>
+</html>

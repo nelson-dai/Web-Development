@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>removeChild</title>
+</head>
+<body>
+	<form name="baseInfo" action="#" method="post">
+		<select name="hobby" id="hobby">
+	   	  <option value="basketball">basketball</option>
+		  <option id="football" value="football">football</option>
+		  <option id="volleyball" value="volleyball">volleyball</option>
+	   </select>
+	</form>
+</body>
+<script type="text/javascript">
+
+	var hobby = document.getElementById("hobby");
+	var volleyball = document.getElementById("volleyball");
+	//hobby.removeChild(volleyball);
+	hobby.removeChild(hobby.options[2]);
+</script>
+</html>

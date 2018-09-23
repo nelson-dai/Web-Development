@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>createElement</title>
+</head>
+<body>
+	<form name="baseInfo" action="#" method="post">
+		<select name="hobby" id="hobby">
+	   	  <option value="basketball">basketball</option>
+		  <option value="football">football</option>
+		  <option value="volleyball">volleyball</option>
+	   </select>
+	</form>
+</body>
+<script type="text/javascript">
+	/*add running as an option*/
+	//create a new option
+	var optionNew = document.createElement("option");//<option ><option />
+	
+	//add value and type
+	optionNew.setAttribute("value","run");//<option value="run"><option />
+	
+	//add text
+	var txt = document.createTextNode("running");
+	optionNew.appendChild(txt);//<option value="run">running<option />
+	
+	//add new option into select
+	var hobby = document.getElementById("hobby");
+	hobby.appendChild(optionNew);
+	
+</script>
+</html>

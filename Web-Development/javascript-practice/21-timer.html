@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>timer</title>
+<script type="text/javascript">
+	//Execute only once
+	//clearTimeout();
+	/*
+	var timer = setTimeout(function() {
+		alert("setTimeout");
+	}, 6000);
+	
+	clearTimeout(timer);
+	*/
+	
+	//Execute every 3 seconds
+	var interval = setInterval(function() {
+		alert("setInterval");
+	}, 3000);
+	//close setInterval timer
+	clearInterval(interval);
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onfocus&onblur</title>
+</head>
+<body>
+	<label for="txt">name：</label>
+	<input id="txt" type="text" >
+	<span id="nameValid"></span>
+</body>
+<script type="text/javascript">
+	var txt = document.getElementById("txt");
+	var span = document.getElementById("nameValid");
+
+	txt.onfocus = function(){
+		span.innerHTML = "at least 8 characters";
+		span.style.color = "green";
+	};
+
+	txt.onblur = function(){
+		span.innerHTML = "wrong format";
+		span.style.color = "red";
+		
+	};
+</script>
+</html>

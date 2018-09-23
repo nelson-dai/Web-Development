@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>built-in object</title>
+<script type="text/javascript">
+	/*
+	Number:
+		var num1 = new Number(8);
+		var num2 = Number(6);
+		alert(typeof num1.toString());
+		alert(typeof num1.valueOf());
+		
+	String:	
+		var str = new String("monkey-1024-javascript");
+		alert("length:" + str.length);
+		alert("charAt:" +　str.charAt(3));
+		alert("charCodeAt:" + str.charCodeAt(4));    //unicode
+		alert("indexOf:" +str.indexOf("n"));
+		alert("lastIndexOf:" +str.lastIndexOf("a"));
+		var arr = str.split("-");
+		for(index in arr){
+			alert("split:" + arr[index]);
+		}
+		alert("substr:" + str.substr(3));
+		alert("substring:" + str.substring(2,6));
+		alert("toUpperCase:" + str.toUpperCase());
+	
+	Array：
+		var arr = new Array();
+		var arr = new Array(10);
+		var arr = new Array(8,"java","10");
+		var arr = [];
+		
+		var arr = [9,8,5,"java","javascript","apple","2"];
+		alert(arr.length);
+		alert(arr.join("-"));
+		alert(arr.pop());
+		alert(arr);
+		alert(arr.push("css","html"));
+		alert(arr);
+		alert(arr.reverse());
+		alert(arr.sort());
+	
+	Date：
+		var d = new Date();
+		alert(d);
+		alert(d.toLocaleString());
+		alert(d.getFullYear());
+		alert(d.getMonth());//month 0~11
+		alert(d.getDate());//day 1~31
+		alert(d.getDay());//week
+		alert(d.getTime());//from 1970/01/01 midnight ms
+		
+		var d2 = new Date(31 * 365 * 24 * 60 * 60 * 1000);//1970-1-1 add ms
+		alert(d2.toLocaleString());
+		
+		var d3 = 10 * 365 * 24 * 60 * 60 * 1000;
+		
+		alert(new Date(d2.getTime() + d3).toLocaleString());
+		
+	Math	
+		alert(Math.PI);
+		alert(Math.abs(-1));
+		alert(Math.ceil(3.1));
+		alert(Math.floor(3.9));
+		alert(Math.pow(2,3));
+		alert(Math.random());
+		alert(Math.round(8.5));
+	
+	RegExp：	
+		var reg = new RegExp();
+		var reg = /^[A-z0-9_-]+\@[A-z0-9]+\.[A-z]+$/;
+		
+		var email = "nelson.d.hongyu@foxmail.com";
+		
+		alert(reg.test(email));
+	*/
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>function</title>
+<script type="text/javascript">
+
+	//1.normal way
+	function fun1(){
+		alert("This is a function created in the normal way.");
+	}
+	//fun1();
+	
+	//2.no name
+	var fun2 = function(){
+		alert("This is a function created anonymously");
+	}
+	fun2();
+	
+	//3.Object function
+	var fun3 = new Function("a","b","alert(a+b)");
+	fun3(10,5);
+</script>
+</head>
+<body>
+
+</body>
+</html>

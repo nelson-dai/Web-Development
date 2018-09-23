@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>getElementsByName</title>
+</head>
+<body>
+	<form name="baseInfo" action="#" method="post">
+		input：<input type="text" value="value1"  name="monkey">
+		<br>
+		input：<input type="text" value="value2"  name="monkey">
+		<br>
+		input：<input type="text" value="value3" name="monkey">
+		<br>
+		<input type="button" id="btn" name="submit" value="submit" />
+	</form>
+</body>
+<script type="text/javascript">
+	var arr = document.getElementsByName("monkey");
+	//alert(arr.length);
+	/*
+	for(index in arr){
+		if(!arr.hasOwnProperty(index)){
+			continue;
+		}
+		
+		alert(arr[index].value);
+	}
+	*/
+	for(var i=0; i<arr.length; i++){
+		alert(arr[i].value);
+	}
+</script>
+</html>

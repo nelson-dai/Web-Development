@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>insertBefore</title>
+</head>
+<body>
+	<form name="baseInfo" action="#" method="post">
+		<select name="hobby" id="hobby">
+	   	  <option value="basketball">basketball</option>
+		  <option id="football" value="football">football</option>
+		  <option value="volleyball">volleyball</option>
+	   </select>
+	</form>
+</body>
+<script type="text/javascript">
+
+	var optionNew = document.createElement("option");//<option ><option />
+	
+
+	optionNew.setAttribute("value","run");//<option value="run"><option />
+	
+
+	var txt = document.createTextNode("running");
+	optionNew.appendChild(txt);//<option value="run">running<option />
+	
+	var football = document.getElementById("football");
+	
+	var hobby = document.getElementById("hobby"); 
+	//hobby.insertBefore(optionNew,football);
+	hobby.insertBefore(optionNew,hobby.options[1]);
+</script>
+</html>

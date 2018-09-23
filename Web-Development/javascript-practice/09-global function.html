@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>global function</title>
+<script type="text/javascript">
+	/*
+		encode and decode
+		encodeURI() decodeURI()
+		encodeURIComponent() decodeURIComponent()
+		escape() unescape()
+		
+		often use encodeURL
+		
+		var url = "http://www.google.com?name=张三&password=123";
+		console.log(encodeURI(url))
+		console.log(encodeURIComponent(url));
+		console.log(escape(url));
+		
+		//http://www.google.com?name=%E5%BC%A0%E4%B8%89&password=123
+		//http%3A%2F%2Fwww.google.com%3Fname%3D%E5%BC%A0%E4%B8%89%26password%3D123
+		//http%3A//www.google.com%3Fname%3D%u5F20%u4E09%26password%3D123
+		
+		Cast：
+		Number();
+		String();
+		Boolean();
+		
+		to number：
+		parseInt();
+		parseFloat();
+		
+		eval();
+	*/
+	
+	function print(str){
+		
+		eval(str);
+	}
+	
+	print("var a=2;var b=3;alert(a+b)");
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
