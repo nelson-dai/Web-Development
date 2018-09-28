@@ -1,0 +1,119 @@
+<!doctype <!DOCtypes html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="main.css" />-->
+    <!--<script src="main.js"></script>-->
+</head>
+
+<script>
+    function insert(num){
+        form.screen.value=form.screen.value+num;
+    }
+    function calculate(){
+        var exp=form.screen.value;
+        if(exp){
+            form.screen.value=eval(exp);
+        }
+        
+    }
+    function reset(){
+        form.screen.value="";
+    }
+    function back(){
+        var exp=form.screen.value;
+        form.screen.value=exp.substring(0,exp.length-1);
+    }
+</script>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    .button{
+        width:50;
+        height:50;
+        font-size:25;
+        margin:2;
+        cursor:pointer;
+        background: #607d8b;
+        border:none;
+        color:white;
+    }
+    .screen{
+        width:217;
+        margin:5;
+        font-size:25;
+        padding:5;
+        border:none;
+        color:#607d8b;
+    }
+    .main{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translateX(-50%) translateY(-50%)
+    }
+    .bg{
+        background:linear-gradient(to right,#e91e63,#3f51b5);
+        height:100%;
+    }
+    .intro{
+        text-align: center;
+        color:whitesmoke;
+        padding:30;
+    }
+</style>
+
+
+<body>
+
+    <div class="bg">
+
+            <div class="intro">
+                    <h1>Welcome to my simple calculator, hope you will like it!</h1>
+                    <h3>BTW an integer with leading 0 is treat as base 8 (octal)</h3>
+            </div>
+    </div>
+    <div class="main">
+        <form name="form">
+            <input class="screen" name="screen">
+        </form>
+        <table>
+            <tr>
+                <td><input class="button" type="button" value="AC" onclick="reset()"></td>
+                <td><input class="button" type="button" value="DEL" onclick="back()"></td>
+                <td><input class="button" type="button" value="%" onclick="insert('%')"></td>
+                <td><input class="button" type="button" value="/" onclick="insert('/')"></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="7" onclick="insert(7)"></td>
+                <td><input class="button" type="button" value="8" onclick="insert(8)"></td>
+                <td><input class="button" type="button" value="9" onclick="insert(9)"></td>
+                <td><input class="button" type="button" value="x" onclick="insert('x')"></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="4" onclick="insert(4)"></td>
+                <td><input class="button" type="button" value="5" onclick="insert(5)"></td>
+                <td><input class="button" type="button" value="6" onclick="insert(6)"></td>
+                <td><input class="button" type="button" value="-" onclick="insert('-')"></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="1" onclick="insert(1)"></td>
+                <td><input class="button" type="button" value="2" onclick="insert(2)"></td>
+                <td><input class="button" type="button" value="3" onclick="insert(3)"></td>
+                <td><input class="button" type="button" value="+" onclick="insert('+')"></td>
+            </tr>
+            <tr>
+                <td colspan=2><input class="button" type="button" style="width:106"value="0" onclick="insert(0)"></td>
+                <td><input class="button" type="button" value="." onclick="insert('.')"></td>
+                <td><input class="button" type="button" value="=" onclick="calculate()"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
